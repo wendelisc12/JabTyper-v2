@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JabTyper 2</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="modal-show-points">
+        <div id="show-points-box">
+            <div id="show-name">
+                <h1>Olá, <span id="nome-player"></span></h1>
+            </div>
+
+            <div id="show-pontuacao">
+                <h2 id="palavras-escritas">Você escreveu: <span id="ppm">0</span> palavras por minuto</h2>
+                <div id="palavras-erradas-corretas">
+                    <div id="palavras-corretas">
+                        <h2 style="color: #56e043;">Você acertou: <span id="palavras-corretas-show">0</span> palavras</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div id="historico-jogador">
+               <table id="historico-jogador-tabela">
+                   <tr>
+                       <th id="tempo-tabela">Dificuldade</th>
+                       <th id="ppm-tabela">Palavras por minuto</th>
+                   </tr>
+
+                   
+               </table>
+            </div>
+
+                   
+        </div>
+        <div id="buttons-box">
+            <button id="recomecar">Recomeçar</button>
+            <button id="mudar-dificuldade">Mudar Dificuldade</button>
+        </div>
+    </div>
+
+    <div id="modal-dificuldades">
+        <div id="brand">
+            <h1>Jab<span style="color: #0275d8;">Typer</span><span style="color: #f7ad25; font-size: 0.5em;">v2</span></h1>
+        </div>
+        <form action="" id="form-dificuldades">
+            <div id="nome-box">
+                <input type="text" name="nome" id="nome" placeholder="Insira seu nome" required>
+            </div>
+            <ul id="lista-dificuldades">
+                <h2>Escolha a dificuldade</h2>
+                <li>
+                    <div class="select-dificuldade">
+                        <input type="radio" name="dificuldade" id="fase1" value="fase1" required>
+                    </div>
+                    <label for="fase1">
+                        <h3>Fase 1</h3>
+                        <p>Digite a frase o mais rápido que puder em 20 segundos (modo fácil)</p>
+                    </label>
+                </li>
+
+                <li>
+                    <div class="select-dificuldade">
+                        <input type="radio" name="dificuldade" id="fase2" value="fase2" required>
+                    </div>
+                    <label for="fase2">
+                        <h3>Fase 2</h3>
+                        <p>Digite a frase o mais rápido que puder em 15 segundos (modo médio) </p>
+                    </label>
+
+                </li>
+
+                <li>
+                    <div class="select-dificuldade">
+                        <input type="radio" name="dificuldade" id="fase3" value="fase3" required>
+                    </div>
+                    <label for="fase3">
+                        <h3>Fase 3</h3>
+                        <p>Digite a frase o mais rápido que puder em 15 segundos em (modo difícil)</p>
+                    </label>
+                </li>
+            </ul>
+            <div id="iniciar-box">
+                <button type="submit" id="iniciar">Começar</button>
+            </div>
+        </form>
+    </div>
+    
+    <div id="principal-box">
+        <main>
+            <div id="palavraEscolhida-box">
+                <div id="limitador-palavra">
+                    <h2 id="palavraEscolhida"></h2>
+                </div>
+            </div>
+            <div id="inf-box">
+                <div id="tempo-box">
+                    <div id="tempo-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                        </svg>
+                        <h3>Tempo: <span id="tempo">15</span></h3>
+                    </div>
+                </div>
+
+                <div id="regressiva-box">
+                    <h3 id="regressiva">3</h3>
+                </div>
+
+                <div id="campo-contadores">
+                    <div id="contadores-box">
+                        <ul>
+                            <li id="letras-box">Letras: <span id="letras">0</span></li>
+                            <li id="palavras-box">Palavras: <span id="palavras">0</span></li>
+                        </ul>
+                    </div>
+
+                    
+                    <div id="area-digitacao-box">
+                        <textarea disabled name="" autofocus id="area-digitacao" placeholder="Comece a digitar aqui" style="width: 100%;" rows="16"></textarea>
+                    </div>
+
+                    <div id="progress-bar-box">
+                        <div id="progress-bar">
+                            <div id="progress"></div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+    <script src="script/script.js"></script>
+</body>
+</html>

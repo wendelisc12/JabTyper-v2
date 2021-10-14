@@ -1,0 +1,420 @@
+*{ margin: 0; padding: 0; box-sizing: border-box;}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #1d1d1d;
+    overflow: hidden;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --color-yellow:#f8ac1f;
+    --color-blue:#0275d8;
+    --color-white: #ececf0;
+}
+
+#principal-box{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#palavraEscolhida-box{
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f1f1f1;
+    width: 1200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#limitador-palavra{
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    width: 97%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#regressiva-box{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 60%;
+    width: 100%;
+    font-size: 3em;
+    z-index: 12;
+    user-select: none;
+}
+
+#tempo-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px 0;
+    user-select: none;
+}
+
+#tempo-container{
+    color: var(--color-blue);
+    border-radius: 5px;
+    background: #eeeeee;
+    font-size: 1.2em;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tempo-container svg{
+    margin-right: 10px;
+}
+
+#contadores-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+    background-color: #fff;
+    height: 40px;
+    border-top: 1px solid var(--color-blue);
+    border-left: 1px solid var(--color-blue);
+    border-right: 1px solid var(--color-blue);
+    background-color: #f1f1f1;
+}
+
+#campo-contadores{
+    display: flex;
+    flex-direction: column;
+}
+
+#progress-bar-box{
+    border-bottom: 1px solid var(--color-blue);
+    border-right: 1px solid var(--color-blue);
+    border-left: 1px solid var(--color-blue);
+    height: 25px;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+
+#progress-bar{
+    border-radius: 5px;
+    width: 98%;
+    height: 11px;
+    background-color: rgb(212, 212, 212);
+}
+
+#progress{
+    width: 0%;
+    height: 100%;
+    background-color: var(--color-blue);
+    border-radius: 5px;
+    transition: width 1s;
+}
+
+#area-digitacao-box{
+    border-left: 1px solid var(--color-blue);
+    border-right: 1px solid var(--color-blue);
+    background-color: #f1f1f1;
+    padding: 5px;
+}
+
+#area-digitacao{
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 15px;
+    font-size: 1em;
+    outline-color: #f7ad25;
+    resize: none;
+}
+
+#contadores-box ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 30px;
+    background: #dbdbdb;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 700;
+    user-select: none;
+}
+
+#modal-dificuldades{
+    height: 100vh;
+    width: 100vw;
+    z-index: 55;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction:column ;
+    position: absolute;
+    top: 0%;
+    transition: top 400ms;
+    background-color: #fff;
+
+}
+
+#brand{
+    font-size: 1.2em;
+}
+
+#form-dificuldades{
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    width: 300px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dbdbdb;
+    box-shadow: 5px 5px 5px rgba(206, 206, 206, 0.363);
+}
+
+#nome-box{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+input#nome{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding: 10px 35px;
+    margin: 10px 5px;
+    font-size: 1em;
+    transition: all 400ms;
+    border-radius: 5px;
+    background: url('../icons/person.svg') no-repeat left;
+}
+
+input#nome:hover{
+    border-bottom: 1px solid var(--color-blue);
+}
+
+input#nome::placeholder{
+    color: #545457;
+}
+
+#lista-dificuldades{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+
+#lista-dificuldades h2{
+    text-align: center;
+    margin: 10px 0;
+    color: var(--color-blue);
+    margin-bottom: 20px;
+}
+
+#lista-dificuldades li{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgb(223, 223, 223);
+    font-size: 0.9em;
+    user-select:none;
+}
+
+#lista-dificuldades li label{
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+#lista-dificuldades li label h3{
+    color: var(--color-yellow);
+}
+
+.select-dificuldade{
+    padding: 10px;
+}
+
+#iniciar-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-top: 1px solid rgb(223, 223, 223);
+}
+
+#iniciar{
+    padding: 10px 30px;
+    font-size: 1em;
+    border: none;
+    background: var(--color-blue);
+    color: var(--color-white);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 400ms all;
+    font-weight: 700;
+}
+
+#iniciar:hover{
+    filter: brightness(0.8);
+}
+
+#modal-show-points{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 50;
+    top: -100%;
+    transition: top 500ms;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#show-points-box{
+    border-top: 1px solid#cacaca;
+    border-right: 1px solid#cacaca;
+    border-left: 1px solid#cacaca;
+    background-color: rgb(252, 252, 252);
+    width: 80%;
+    height: 80%;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+#show-name{
+    font-size: 2em;
+    color: var(--color-blue);
+}
+
+#show-pontuacao{
+    height: 170px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border-top: 1px solid rgb(223, 223, 223);
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+#palavras-escritas{
+    color: var(--color-yellow);
+    font-size: 2em;
+}
+
+#palavras-erradas-corretas{
+    font-size: 1.1em;
+}
+
+#historico-jogador{
+    border:1px solid rgb(223, 223, 223);
+    border-radius: 5px;
+    overflow: auto;
+    height: 200px;
+}
+
+#historico-jogador-tabela{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.2em;
+}
+
+#historico-jogador-tabela th{
+    border-bottom: 1px solid rgb(223, 223, 223);
+    background-color: rgb(233, 233, 233);
+}
+
+#historico-jogador-tabela th#tempo-tabela{
+    border-right: 1px solid rgb(201, 201, 201);
+}
+
+#historico-jogador-tabela th{
+    height: 40px;
+}
+
+#historico-jogador-tabela td{
+    height: 50px;
+    border-bottom:1px solid rgb(201, 201, 201);
+    text-align: center;
+    font-size: 1em;
+}
+
+#historico-jogador-tabela td:first-child{
+    border-right:1px solid rgb(201, 201, 201);
+}
+
+#buttons-box{
+    border-bottom: 1px solid#cacaca;
+    border-right: 1px solid#cacaca;
+    border-left: 1px solid#cacaca;
+    background: rgb(252, 252, 252);;
+    border-radius: 0 0 10px 10px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+
+#buttons-box button{
+    width: 200px;
+    height: 40px;
+    margin: 0 30px;
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    transition: all 400ms;
+    cursor: pointer;
+}
+
+#buttons-box button:hover{
+    filter: brightness(0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.397);
+}
+
+#recomecar{
+    background: var(--color-blue);
+    color: var(--color-white);
+}
+
+#mudar-dificuldade{
+    background-color: var(--color-yellow);
+    color: var(--color-white);
+}
